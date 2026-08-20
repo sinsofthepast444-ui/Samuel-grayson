@@ -154,8 +154,8 @@ button, a {
     font-size: 9px;
     letter-spacing: 0.34rem;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.78);
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
+    color: #ffffff !important;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.72);
     z-index: 3;
 }
 
@@ -170,21 +170,21 @@ button, a {
     gap: 26px;
     align-items: flex-start;
     padding-left: 18px;
-    border-left: 2px solid rgba(255, 255, 255, 0.38);
+    border-left: 2px solid rgba(255, 255, 255, 0.72);
 }
 
 .gallery-section {
     position: relative;
     border: none;
     background: transparent;
-    color: rgba(255, 255, 255, 0.68);
+    color: #ffffff !important;
     font-size: 19px;
     letter-spacing: 0.28rem;
     text-transform: lowercase;
     padding: 6px 0;
     cursor: pointer;
     font-weight: 500;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.36);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.78);
     transition: color 0.2s ease, transform 0.2s ease, letter-spacing 0.2s ease;
 }
 
@@ -195,13 +195,13 @@ button, a {
     top: 50%;
     width: 6px;
     height: 1px;
-    background: rgba(255, 255, 255, 0.42);
+    background: rgba(255, 255, 255, 0.82);
     transform: translateY(-50%);
     transition: background 0.2s ease, width 0.2s ease;
 }
 
 .gallery-section.active {
-    color: #ffffff;
+    color: #ffffff !important;
     transform: translateX(14px);
     font-weight: 900;
     letter-spacing: 0.35rem;
