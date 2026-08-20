@@ -617,13 +617,13 @@ button, a {
     }
 
     .gallery-window {
-        width: 96vw;
-        height: 84vh;
+        width: 94vw;
+        height: 78vh;
         border-width: 6px;
     }
 
     .category-slide {
-        padding: 42px 8px 24px;
+        padding: 72px 10px 42px;
     }
 
     .slide-content {
@@ -638,13 +638,22 @@ button, a {
 
     .slide-gallery {
         width: 100%;
-        height: 100%;
+        height: auto;
+        max-height: calc(100% - 28px);
     }
 
     .slide-images {
-        width: min(100%, 430px);
-        height: min(100%, 560px);
+        width: min(82vw, 360px);
+        height: auto;
+        max-height: min(54vh, 500px);
+        aspect-ratio: 4 / 5;
         border-width: 6px;
+    }
+
+    .photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     .slide-arrow {
