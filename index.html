@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samuel Grayson | Artist & Illustrator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="brand-block">
+                <a href="#" class="brand">Samuel Grayson</a>
+                <span class="brand-subtitle">Artist | Illustrator</span>
+            </div>
+
+            <div class="meta-tag">Los Angeles</div>
+
+            <nav class="nav" aria-label="Main navigation">
+                <button type="button" data-panel="about">About</button>
+                <button type="button" data-panel="contact">Contact</button>
+            </nav>
+        </header>
+
+        <main class="gallery">
+            <div class="gallery-label">Work</div>
+
+            <div class="gallery-section-rail" aria-label="Gallery sections">
+                <button type="button" class="gallery-section active" data-index="0">paintings</button>
+                <button type="button" class="gallery-section" data-index="1">drawings</button>
+                <button type="button" class="gallery-section" data-index="2">digital</button>
+            </div>
+
+            <div class="gallery-window" id="galleryWindow">
+                <section class="category-slide paintings active" data-index="0">
+                    <div class="slide-content">
+                        <span class="slide-kicker">Series 01</span>
+                        <h2>Paintings</h2>
+                    </div>
+                    <div class="slide-gallery">
+                        <button class="slide-arrow left" type="button" aria-label="Previous paintings">←</button>
+                        <div class="slide-images" aria-label="Paintings gallery">
+                            <figure class="photo-card"><img src="assets/paintings/palm_tree_beach .jpg" alt="Painting 01" /></figure>
+                            <figure class="photo-card"><img src="assets/paintings/winter_red_bird.jpg" alt="Painting 02" /></figure>
+                            <figure class="photo-card"><img src="assets/paintings/flowers_in_a_vase.jpg" alt="Painting 03" /></figure>
+                            <figure class="photo-card"><img src="assets/paintings/mountain _painting .jpg" alt="Painting 04" /></figure>
+                            <figure class="photo-card"><img src="assets/paintings/tree&pink_clouds.jpg" alt="Painting 05" /></figure>
+                        </div>
+                        <button class="slide-arrow right" type="button" aria-label="Next paintings">→</button>
+                    </div>
+                </section>
+
+                <section class="category-slide drawings" data-index="1">
+                    <div class="slide-content">
+                        <span class="slide-kicker">Series 02</span>
+                        <h2>Drawings</h2>
+                    </div>
+                    <div class="slide-gallery">
+                        <button class="slide-arrow left" type="button" aria-label="Previous drawings">←</button>
+                        <div class="slide-images" aria-label="Drawings gallery">
+                            <figure class="photo-card"><img src="assets/drawings/female_portrait.png" alt="Drawing 01" /></figure>
+                            <figure class="photo-card"><img src="assets/drawings/bird_b&w.jpg" alt="Drawing 02" /></figure>
+                            <figure class="photo-card"><img src="assets/drawings/dark-skin_female_portrait.png" alt="Drawing 03" /></figure>
+                            <figure class="photo-card"><img src="assets/drawings/orange_pumpkin.jpg" alt="Drawing 04" /></figure>
+                            <figure class="photo-card"><img src="assets/drawings/j-cole_portrait.png" alt="Drawing 05" /></figure>
+                            <figure class="photo-card"><img src="assets/drawings/red_heart_preview.png" alt="Drawing 06" /></figure>
+                            <figure class="photo-card"><img src="assets/drawings/old_man_with_beard.png" alt="Drawing 07" /></figure>
+                            <figure class="photo-card"><img src="assets/drawings/flower_b&w.jpg" alt="Drawing 08" /></figure>
+                             <figure class="photo-card"><img src="assets/drawings/kevin-hart_portrait.png" alt="Drawing 09" /></figure>
+                        </div>
+                        <button class="slide-arrow right" type="button" aria-label="Next drawings">→</button>
+                    </div>
+                </section>
+
+                <section class="category-slide digital" data-index="2">
+                    <div class="slide-content">
+                        <span class="slide-kicker">Series 03</span>
+                        <h2>Digital</h2>
+                    </div>
+                    <div class="slide-gallery">
+                        <button class="slide-arrow left" type="button" aria-label="Previous digital">←</button>
+                        <div class="slide-images" aria-label="Digital gallery">
+                            <figure class="photo-card"><img src="assets/digital/ai_flamo.png" alt="Digital 01" /></figure>
+                            <figure class="photo-card"><img src="assets/digital/valentine_card_04 .jpg" alt="Digital 02" /></figure>
+                            <figure class="photo-card"><img src="assets/digital/moms_birthday_2023.png" alt="Digital 03" /></figure>
+                            <figure class="photo-card"><img src="assets/digital/valentine_card03.jpg" alt="Digital 04" /></figure>
+                            <figure class="photo-card"><iframe src="assets/digital/sotp_female_reaper.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Digital 05"></iframe></figure>
+                            <figure class="photo-card"><iframe src="assets/digital/sotp_reaper.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Digital 06"></iframe></figure>
+                            <figure class="photo-card"><iframe src="assets/digital/space_mouse.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Digital 07"></iframe></figure>
+                        </div>
+                        <button class="slide-arrow right" type="button" aria-label="Next digital">→</button>
+                    </div>
+                </section>
+
+            </div>
+
+            <button class="gallery-arrow left" id="prev" type="button" aria-label="Previous section">↑</button>
+            <button class="gallery-arrow right" id="next" type="button" aria-label="Next section">↓</button>
+
+            <div class="gallery-status">
+                <span id="current">01</span>
+                <span class="slash">/</span>
+                <span>03</span>
+            </div>
+        </main>
+
+        <section class="overlay-panel" id="about">
+            <button class="close" type="button" aria-label="Close About">×</button>
+            <div class="panel-top">About</div>
+            <div class="panel-body">
+                <div class="panel-accent blue"></div>
+                <h1>Samuel Grayson</h1>
+                <p class="about-tag">0__0</p>
+                <p class="intro-text">Artist | Illustrator based in Los Angeles.</p>
+                <p>Samuel explores portraiture, identity, and emotional storytelling through a mix of traditional and digital methods.</p>
+                <p>His practice blends raw expression with carefully composed form to create imagery rooted in memory, movement, and atmosphere.</p>
+            </div>
+            <div class="panel-bottom">Los Angeles — 2026</div>
+        </section>
+
+        <section class="overlay-panel" id="contact">
+            <button class="close" type="button" aria-label="Close Contact">×</button>
+            <div class="panel-top">Contact</div>
+            <div class="panel-body">
+                <div class="panel-accent purple"></div>
+                <h1>Hello.</h1>
+                <p class="intro-text">Commissions · Collaborations · Exhibitions</p>
+                <div class="contact-links">
+                    <a href="mailto:hello@samuelgrayson.com">Email ↗</a>
+                    <a href="#">Instagram ↗</a>
+                </div>
+            </div>
+            <div class="panel-bottom">Los Angeles — 2026</div>
+        </section>
+
+        <footer class="site-footer">
+            <span>© 2026 Samuel Grayson</span>
+            <span>Artist | Illustrator</span>
+        </footer>
+    </div>
+
+    <script>
+        const galleryWindow = document.getElementById('galleryWindow');
+        const current = document.getElementById('current');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        const navButtons = document.querySelectorAll('.nav button');
+        const panels = document.querySelectorAll('.overlay-panel');
+        const closeButtons = document.querySelectorAll('.close');
+        const gallerySections = [...document.querySelectorAll('.gallery-section')];
+        const categorySlides = [...document.querySelectorAll('.category-slide')];
+        const sectionOrder = ['about', 'contact'];
+
+        let gallerySectionIndex = 0;
+        let sectionIndex = -1;
+
+        function updateCounter() {
+            current.textContent = String(gallerySectionIndex + 1).padStart(2, '0');
+        }
+
+        function setActiveGallerySection(nextIndex) {
+            gallerySectionIndex = Math.min(Math.max(nextIndex, 0), gallerySections.length - 1);
+
+            gallerySections.forEach((button, index) => {
+                button.classList.toggle('active', index === gallerySectionIndex);
+            });
+
+            const slide = categorySlides[gallerySectionIndex];
+            if (slide) {
+                galleryWindow.scrollTo({
+                    top: slide.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+
+            updateCounter();
+        }
+
+        function closePanels() {
+            panels.forEach(panel => panel.classList.remove('active'));
+            sectionIndex = -1;
+        }
+
+        function openPanel(panelId) {
+            panels.forEach(panel => panel.classList.remove('active'));
+            const panel = document.getElementById(panelId);
+            if (panel) {
+                panel.classList.add('active');
+                const panelIndex = sectionOrder.indexOf(panelId);
+                if (panelIndex !== -1) sectionIndex = panelIndex;
+            }
+        }
+
+        prev.addEventListener('click', () => setActiveGallerySection(gallerySectionIndex - 1));
+        next.addEventListener('click', () => setActiveGallerySection(gallerySectionIndex + 1));
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                openPanel(button.dataset.panel);
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', closePanels);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closePanels();
+            if (event.key === 'ArrowDown') setActiveGallerySection(gallerySectionIndex + 1);
+            if (event.key === 'ArrowUp') setActiveGallerySection(gallerySectionIndex - 1);
+        });
+
+        gallerySections.forEach((button) => {
+            button.addEventListener('click', () => {
+                setActiveGallerySection(Number(button.dataset.index));
+            });
+        });
+
+        galleryWindow.addEventListener('scroll', () => {
+            let closestIndex = 0;
+            let closestDistance = Number.POSITIVE_INFINITY;
+
+            categorySlides.forEach((slide, index) => {
+                const distance = Math.abs(slide.offsetTop - galleryWindow.scrollTop);
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestIndex = index;
+                }
+            });
+
+            if (closestIndex !== gallerySectionIndex) {
+                gallerySectionIndex = closestIndex;
+                gallerySections.forEach((button, index) => {
+                    button.classList.toggle('active', index === gallerySectionIndex);
+                });
+                updateCounter();
+            }
+        }, { passive: true });
+
+        galleryWindow.addEventListener('wheel', (event) => {
+            if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+                event.preventDefault();
+                setActiveGallerySection(gallerySectionIndex + (event.deltaY > 0 ? 1 : -1));
+            }
+        }, { passive: false });
+
+        document.querySelectorAll('.slide-arrow').forEach((button) => {
+            button.addEventListener('click', (event) => {
+                const gallery = event.currentTarget.parentElement.querySelector('.slide-images');
+                const direction = button.classList.contains('right') ? 1 : -1;
+                gallery.scrollBy({
+                    left: direction * gallery.clientWidth * 0.8,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        updateCounter();
+        setActiveGallerySection(0);
+    </script>
+</body>
+</html>
