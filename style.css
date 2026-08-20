@@ -19,6 +19,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -225,6 +226,8 @@ button, a {
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
     scrollbar-width: none;
 }
 
@@ -244,6 +247,7 @@ button, a {
     background-position: center;
     border-bottom: 1px solid rgba(23, 21, 21, 0.12);
     overflow: hidden;
+    scroll-snap-align: start;
 }
 
 .category-slide::before {
@@ -311,8 +315,11 @@ button, a {
     display: flex;
     gap: 0;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
     width: min(100%, 700px);
     height: min(100%, 720px);
@@ -581,6 +588,13 @@ button, a {
         overflow: hidden;
     }
 
+    .page,
+    .gallery {
+        height: 100svh;
+        min-height: 100svh;
+        overflow: hidden;
+    }
+
     .header {
         padding: 16px 16px 0;
         align-items: center;
@@ -619,15 +633,22 @@ button, a {
     .gallery-section-rail {
         left: 50%;
         top: auto;
-        bottom: 70px;
+        bottom: 58px;
         transform: translateX(-50%);
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 14px;
-        width: calc(100vw - 32px);
+        width: calc(100vw - 28px);
         padding-left: 0;
         border-left: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gallery-section-rail::-webkit-scrollbar {
+        display: none;
     }
 
     .gallery-section {
@@ -648,15 +669,21 @@ button, a {
 
     .gallery-window {
         width: 94vw;
-        height: 72svh;
-        max-height: 620px;
+        height: 76svh;
+        max-height: 640px;
         border-width: 6px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+        overscroll-behavior-y: contain;
     }
 
     .category-slide {
         height: 100%;
         min-height: 100%;
-        padding: 58px 12px 96px;
+        padding: 56px 12px 104px;
+        overflow: hidden;
+        scroll-snap-align: start;
     }
 
     .slide-content {
@@ -671,15 +698,15 @@ button, a {
 
     .slide-gallery {
         width: 100%;
-        height: 100%;
+        height: min(100%, 470px);
         max-height: none;
         min-height: 0;
     }
 
     .slide-images {
         width: min(78vw, 340px);
-        height: auto;
-        max-height: min(46svh, 430px);
+        height: min(48svh, 430px);
+        max-height: 100%;
         aspect-ratio: 4 / 5;
         border-width: 6px;
         overflow-x: auto;
@@ -690,6 +717,11 @@ button, a {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    .photo-card {
+        min-width: 100%;
+        flex: 0 0 100%;
     }
 
     .slide-arrow {
@@ -708,10 +740,14 @@ button, a {
 
     .gallery-arrow.left {
         left: 3%;
+        top: auto;
+        bottom: 104px;
     }
 
     .gallery-arrow.right {
         right: 3%;
+        top: auto;
+        bottom: 104px;
     }
 
     .gallery-label {
