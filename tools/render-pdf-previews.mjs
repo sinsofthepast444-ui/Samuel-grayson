@@ -8,6 +8,9 @@ const jobs = [
   ['assets/drawings/j-cole_portrait.pdf', 'assets/drawings/j-cole_portrait_preview.png'],
   ['assets/drawings/red_heart.pdf', 'assets/drawings/red_heart_preview.png'],
   ['assets/drawings/old_man_with_beard.pdf', 'assets/drawings/old_man_with_beard_preview.png'],
+  ['assets/digital/sotp_female_reaper.pdf', 'assets/digital/sotp_female_reaper_preview.png'],
+  ['assets/digital/sotp_reaper.pdf', 'assets/digital/sotp_reaper_preview.png'],
+  ['assets/digital/space_mouse.pdf', 'assets/digital/space_mouse_preview.png'],
 ];
 
 for (const [source, target] of jobs) {
