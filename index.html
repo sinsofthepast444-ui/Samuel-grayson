@@ -5,6 +5,306 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel Grayson | Artist & Illustrator</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+        /* ===== Samuel Grayson responsive layout fixes ===== */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-width: 0;
+            overflow-x: hidden;
+        }
+
+        img,
+        iframe {
+            display: block;
+            max-width: 100%;
+        }
+
+        .page,
+        .header,
+        .gallery,
+        .gallery-window,
+        .category-slide,
+        .slide-gallery,
+        .slide-images,
+        .photo-card {
+            min-width: 0;
+        }
+
+        /* Desktop/tablet gallery behavior */
+        .gallery-window {
+            overflow-y: auto;
+            overscroll-behavior-y: contain;
+            scroll-snap-type: y mandatory;
+        }
+
+        .category-slide {
+            scroll-snap-align: start;
+            min-height: 100%;
+        }
+
+        .slide-gallery {
+            position: relative;
+            width: 100%;
+            min-height: 0;
+        }
+
+        .slide-images {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-x: contain;
+        }
+
+        .slide-images::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide-images {
+            scrollbar-width: none;
+        }
+
+        .photo-card {
+            flex: 0 0 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            scroll-snap-align: start;
+            background: #15120f;
+        }
+
+        .photo-card > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .photo-card > iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #fff;
+        }
+
+        /* Keep arrows usable without blocking artwork */
+        .slide-arrow,
+        .gallery-arrow {
+            z-index: 8;
+            touch-action: manipulation;
+        }
+
+        /* Large screens */
+        @media (min-width: 1100px) {
+            .header {
+                align-items: center;
+            }
+
+            .gallery-window {
+                min-height: 640px;
+                max-height: calc(100vh - 170px);
+            }
+
+            .category-slide {
+                min-height: calc(100vh - 170px);
+            }
+
+            .slide-gallery {
+                min-height: 480px;
+                height: clamp(480px, 66vh, 760px);
+            }
+
+            .slide-images {
+                height: 100%;
+            }
+        }
+
+        /* Tablets / small laptops */
+        @media (min-width: 769px) and (max-width: 1099px) {
+            .gallery-window {
+                min-height: 560px;
+                max-height: calc(100vh - 150px);
+            }
+
+            .category-slide {
+                min-height: calc(100vh - 150px);
+            }
+
+            .slide-gallery {
+                min-height: 420px;
+                height: clamp(420px, 62vh, 650px);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .page {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .header {
+                width: 100%;
+                max-width: 100%;
+                gap: 0.65rem;
+                flex-wrap: wrap;
+            }
+
+            .brand-block {
+                min-width: 0;
+                flex: 1 1 100%;
+            }
+
+            .brand {
+                overflow-wrap: anywhere;
+            }
+
+            .meta-tag {
+                order: 3;
+            }
+
+            .nav {
+                margin-left: auto;
+            }
+
+            .gallery {
+                width: 100%;
+                max-width: 100%;
+                overflow: visible;
+            }
+
+            .gallery-section-rail {
+                overflow-x: auto;
+                overscroll-behavior-x: contain;
+                scrollbar-width: none;
+            }
+
+            .gallery-section-rail::-webkit-scrollbar {
+                display: none;
+            }
+
+            .gallery-window {
+                width: 100%;
+                max-width: 100%;
+                height: auto !important;
+                min-height: 0 !important;
+                max-height: none !important;
+                overflow: visible !important;
+                scroll-snap-type: none;
+            }
+
+            .category-slide {
+                width: 100%;
+                min-height: 0 !important;
+                height: auto !important;
+                padding-bottom: 1.25rem;
+            }
+
+            .slide-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .slide-gallery {
+                width: 100%;
+                height: auto !important;
+                min-height: 0 !important;
+                aspect-ratio: 4 / 5;
+                max-height: 78vh;
+            }
+
+            .slide-images {
+                width: 100%;
+                height: 100% !important;
+                min-height: 0 !important;
+            }
+
+            .photo-card {
+                flex-basis: 100%;
+                width: 100%;
+                height: 100% !important;
+                min-height: 0 !important;
+            }
+
+            .photo-card > img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .photo-card > iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .slide-arrow {
+                width: 3.25rem;
+                height: 3.25rem;
+                display: grid;
+                place-items: center;
+            }
+
+            .gallery-arrow {
+                position: fixed;
+            }
+
+            .site-footer {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .overlay-panel {
+                width: 100%;
+                max-width: 100%;
+                overflow-y: auto;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 480px) {
+            .slide-gallery {
+                aspect-ratio: 3 / 4;
+                max-height: 72vh;
+            }
+
+            .slide-arrow {
+                width: 2.85rem;
+                height: 2.85rem;
+            }
+        }
+
+        /* Respect reduced-motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .slide-images {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <div class="page">
@@ -40,10 +340,10 @@
                     <div class="slide-gallery">
                         <button class="slide-arrow left" type="button" aria-label="Previous paintings">←</button>
                         <div class="slide-images" aria-label="Paintings gallery">
-                            <figure class="photo-card"><img src="assets/paintings/palm_tree_beach .jpg" alt="Painting 01" /></figure>
+                            <figure class="photo-card"><img src="assets/paintings/palm_tree_beach.jpg" alt="Painting 01" /></figure>
                             <figure class="photo-card"><img src="assets/paintings/winter_red_bird.jpg" alt="Painting 02" /></figure>
                             <figure class="photo-card"><img src="assets/paintings/flowers_in_a_vase.jpg" alt="Painting 03" /></figure>
-                            <figure class="photo-card"><img src="assets/paintings/mountain _painting .jpg" alt="Painting 04" /></figure>
+                            <figure class="photo-card"><img src="assets/paintings/mountain_painting .jpg" alt="Painting 04" /></figure>
                             <figure class="photo-card"><img src="assets/paintings/tree&pink_clouds.jpg" alt="Painting 05" /></figure>
                         </div>
                         <button class="slide-arrow right" type="button" aria-label="Next paintings">→</button>
@@ -81,12 +381,12 @@
                         <button class="slide-arrow left" type="button" aria-label="Previous digital">←</button>
                         <div class="slide-images" aria-label="Digital gallery">
                             <figure class="photo-card"><img src="assets/digital/ai_flamo.png" alt="Digital 01" /></figure>
-                            <figure class="photo-card"><img src="assets/digital/valentine_card_04 .jpg" alt="Digital 02" /></figure>
+                            <figure class="photo-card"><img src="assets/digital/valentine_card_04.jpg" alt="Digital 02" /></figure>
                             <figure class="photo-card"><img src="assets/digital/moms_birthday_2023.png" alt="Digital 03" /></figure>
                             <figure class="photo-card"><img src="assets/digital/valentine_card03.jpg" alt="Digital 04" /></figure>
-                            <figure class="photo-card"><img src="assets/digital/sotp_female_reaper_preview.png" alt="Digital 05" /></figure>
-                            <figure class="photo-card"><img src="assets/digital/sotp_reaper_preview.png" alt="Digital 06" /></figure>
-                            <figure class="photo-card"><img src="assets/digital/space_mouse_preview.png" alt="Digital 07" /></figure>
+                            <figure class="photo-card"><iframe src="assets/digital/sotp_female_reaper.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Digital 05"></iframe></figure>
+                            <figure class="photo-card"><iframe src="assets/digital/sotp_reaper.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Digital 06"></iframe></figure>
+                            <figure class="photo-card"><iframe src="assets/digital/space_mouse.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Digital 07"></iframe></figure>
                         </div>
                         <button class="slide-arrow right" type="button" aria-label="Next digital">→</button>
                     </div>
@@ -254,6 +554,30 @@
                 });
             });
         });
+
+
+        // Touch support for changing gallery sections on mobile.
+        let touchStartY = null;
+
+        galleryWindow.addEventListener('touchstart', (event) => {
+            touchStartY = event.touches?.[0]?.clientY ?? null;
+        }, { passive: true });
+
+        galleryWindow.addEventListener('touchend', (event) => {
+            if (touchStartY === null) return;
+
+            const touchEndY = event.changedTouches?.[0]?.clientY ?? touchStartY;
+            const deltaY = touchStartY - touchEndY;
+
+            if (Math.abs(deltaY) > 60) {
+                setActiveGallerySection(
+                    gallerySectionIndex + (deltaY > 0 ? 1 : -1)
+                );
+            }
+
+            touchStartY = null;
+        }, { passive: true });
+
 
         updateCounter();
         setActiveGallerySection(0);
