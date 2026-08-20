@@ -157,8 +157,8 @@ button, a {
     font-size: 9px;
     letter-spacing: 0.34rem;
     text-transform: uppercase;
-    color: #d7d2ca !important;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.62);
+    color: #ffd36a !important;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.72);
     z-index: 3;
 }
 
@@ -173,14 +173,14 @@ button, a {
     gap: 26px;
     align-items: flex-start;
     padding-left: 18px;
-    border-left: 2px solid rgba(215, 210, 202, 0.68);
+    border-left: 2px solid rgba(255, 211, 106, 0.72);
 }
 
 .gallery-section {
     position: relative;
     border: none;
     background: transparent;
-    color: #d7d2ca !important;
+    color: #ffd36a !important;
     font-size: 19px;
     letter-spacing: 0.28rem;
     text-transform: lowercase;
@@ -198,13 +198,13 @@ button, a {
     top: 50%;
     width: 6px;
     height: 1px;
-    background: rgba(215, 210, 202, 0.78);
+    background: rgba(255, 211, 106, 0.82);
     transform: translateY(-50%);
     transition: background 0.2s ease, width 0.2s ease;
 }
 
 .gallery-section.active {
-    color: #f1eee9 !important;
+    color: #ffffff !important;
     transform: translateX(14px);
     font-weight: 900;
     letter-spacing: 0.35rem;
@@ -212,7 +212,7 @@ button, a {
 }
 
 .gallery-section.active::before {
-    background: #f1eee9;
+    background: #ffffff;
     width: 10px;
 }
 
